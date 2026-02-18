@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>course-detail</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="course-detail.css">
+</head>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo img-fluid" src="pic/logo2.png" alt="โลโก้">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+          <li class="nav-item"><a class="nav-link" href="allcourse.html">รายวิชา</a></li>
+          <li class="nav-item"><a class="nav-link" href="allnews.html">ข่าวประชาสัมพันธ์</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">คำถามที่พบบ่อย</a></li>
+          <li class="nav-item"><a class="nav-link" href="usebility.html">วิธีการใช้งาน</a></li>
+          <li class="nav-item"><a class="nav-link" href="contect.html">ติดต่อเรา</a></li>
+        </ul>
+        <div class="navbar-right">
+          <a href="#"><img src="pic/icons8-search-30.png" alt="ค้นหา" width="24"></a>
+          <span class="divider"></span>
+
+          <div class="dropdown user-dropdown">
+            <button class="btn-user" id="userBtn">
+              <img id="navbarUserImg" src="pic/icons8-user-24.png" class="user-icon">
+              <span id="navbarUserName">ชื่อผู้ใช้งาน</span>
+              <img src="pic/icons8-menu-50 (1).png" class="btn-icon">
+            </button>
+
+            <div class="custom-dropdown-content user-menu-box">
+
+              <div class="user-menu-header">
+          <img id="userMenuProfileImg" src="pic/icons8-user-64.png" class="profile-preview">
+          <div class="profile-name" id="userMenuName">ชื่อผู้ใช้งาน</div>
+          <div class="profile-sub text-center">
+    <a href="priv.html" class="d-block text-center">
+        ข้อมูลส่วนตัว
+    </a>
+</div>
+      </div>
+
+              <a href="status-user.html"><img src="https://img.icons8.com/ios-glyphs/30/todo-list--v1.png"> สถานะการเรียน</a>
+              <a href="plan.html"><img src="https://img.icons8.com/ios/50/calendar--v1.png"> แผนการเรียน</a>
+              <a href="calender-activity.html"><img src="https://img.icons8.com/ios/50/calendar-plus.png"> ปฏิทินกิจกรรม</a>
+
+              <hr>
+              <a href="#">ระบบจัดการ (เฉพาะ Admin)</a>
+              <a href="login.html" class="logout">ออกจากระบบ</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-btn" id="langBtn">
+              <img src="https://img.icons8.com/color/48/thailand.png" class="flag-icon" id="currentFlag"> ไทย
+            </button>
+            <div class="dropdown-content">
+              <a href="#" data-lang="th" data-flag="https://img.icons8.com/color/48/thailand.png">
+                <img src="https://img.icons8.com/color/48/thailand.png" class="flag-icon"> ไทย
+              </a>
+              <a href="#" data-lang="en" data-flag="https://img.icons8.com/color/48/usa.png">
+                <img src="https://img.icons8.com/color/48/usa.png" class="flag-icon"> English
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="cd-page ">
+    
+      <div class="breadcrumb-bar">
+    <div class="container">
+        <a href="index.html">
+            <img src="pic/icons8-home-24.png" alt="home" class="breadcrumb-icon">
+        </a>
+        <span class="separator">
+            <img src="pic/icons8-forward-24.png" alt=">">
+        </span>
+        <span class="current">รายวิชา</span>
+        <span class="separator">
+            <img src="pic/icons8-forward-24.png" alt=">">
+        </span>
+        <span class="current">ชื่อรายวิชา</span>
+    </div>
+</div>
+  <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+          <div class="cd-hero shadow-sm">
+            <img src="pic/c1.png" alt="Video" class="cd-hero-img">
+            <div class="cd-play-wrap">
+              <div class="cd-play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card cd-side-card shadow-sm border-0">
+            <div class="cd-side-header">ชื่อรายวิชา</div>
+            <div class="card-body p-4">
+              <div class="cd-time-box mb-4">
+                <i class="bi bi-calendar3 fs-5"></i>
+                <div>
+                  <small class="d-block opacity-75">ระยะเวลา :</small>
+                  <span class="small">01 ส.ค. - 31 ส.ค. 2567, 08:00 - 17:00</span>
+                </div>
+              </div>
+              <div class="cd-status-item d-flex justify-content-between align-items-center mb-3">
+    
+    <div class="small">
+        <i class="bi bi-award-fill text-primary me-2"></i>
+        สถานะ Certificate
+    </div>
+
+    <button class="btn cd-btn-orange">
+        ส่งไปยังอีเมล
+    </button>
+
+</div>
+
+             <div class="cd-status-item d-flex justify-content-between align-items-center mb-4">
+    
+    <div class="small">
+        <i class="bi bi-clipboard-check-fill text-primary me-2"></i>
+        แบบประเมินรายวิชา
+    </div>
+
+    <button class="btn cd-btn-orange">
+        ทำแบบประเมิน
+    </button>
+
+</div>
+
+              <button class="btn cd-btn-report w-100" data-bs-toggle="modal" data-bs-target="#reportModal">
+                <i class="bi bi-chat-dots me-2"></i>แจ้งปัญหาการเรียน
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm cd-tabs-card overflow-hidden">
+            <ul class="nav nav-tabs cd-nav-tabs" id="courseTab" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#detail">รายละเอียดรายวิชา</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#list">รายการรายวิชา</button>
+              </li>
+            </ul>
+
+            <div class="tab-content p-4">
+              <div class="tab-pane fade show active" id="detail">
+                <p class="mb-3 fw-medium">ช่วยให้ทีมของคุณรู้สึกเชื่อมโยงกับ บริษัท ของคุณมากขึ้นด้วยการผสมผสานเครื่องมือเทคโนโลยีดิจิทัลที่เหมาะสมเข้ากับขั้นตอนการทำงาน</p>
+                <p class="small text-secondary fw-light mb-2">ดีเทลจับจีบผ้ายืดออร์แกนซ่าสีฟ้าปักลายละเอียดอ่อนแบบซิทรู</p>
+                <p class="small text-secondary fw-light mb-2">รายละเอียดหนังไหล่คอนทราสต์สีคอนทราสต์รูปเงาดำสวยงามน่าทึ่ง</p>
+                <p class="small text-secondary fw-light mb-3">ปุ่มคำชี้แจงปกปิดการปรับแต่งกระเป๋าแพทช์ปกปกพกจมกระเป๋าหน้าอกเย็บด้านบนเสื้อครอป</p>
+                <p class="small text-secondary fw-light mb-2">ชิ้นในหนังเต็มรูปแบบที่สวมใส่สบายอย่างง่ายดายรายละเอียดตับเป็นเอกลักษณ์ที่ปลายเท้าด้านที่ 'ตัดออกไป'</p>
+                <p class="small text-secondary fw-light mb-2">ต่ำสะอาดและโบเย็บวัดเงารองเท้าคอร์กที่หรูหรางานสายรัดหลังแบบยึดได้ลื่นลุกแมวกางคางดีไซน์เลิศล้ำสายสลิงหก</p>
+                <p class="small text-secondary fw-light mb-4">สลิงลุกแมวกางดีไซน์เลิศล้ำนี้</p>
+                
+                <h6 class="fw-bold mb-2">รายวิชาเหมาะสมกับ</h6>
+                <ul class="small text-secondary fw-light ps-3">
+                  <li>ตำแหน่งที่ควรเรียน</li>
+                </ul>
+              </div>
+
+              <div class="tab-pane fade" id="list">
+                <div class="lesson-wrapper-new">
+
+                  <div class="lesson-unit-new">
+                    <div class="lesson-unit-header-new">
+                      <span>บทที่ 1</span>
+                      <button class="btn btn-sm btn-primary rounded-pill px-3">
+                        <i class="bi bi-download me-1"></i> ดาวน์โหลด
+                      </button>
+                    </div>
+
+                    <div class="lesson-items-new">
+                      <div class="lesson-row-new">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-check-circle-fill icon-blue"></i>
+                        <a href="pretest2.1.html" class="text-decoration-none">ทำข้อสอบก่อนเรียน</a>
+                        </div>
+                        <div class="lesson-right-new">
+                          <span class="label-text">คะแนนที่ได้</span>
+                          <span class="score-box">8/15</span>
+                        </div>
+                      </div>
+
+                      <div class="lesson-row-new">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-play-circle-fill icon-blue"></i>
+                          <span>วิดีโอบทที่ 1</span>
+                        </div>
+                        <div class="lesson-right-new">
+                          <span class="label-text"><i class="bi bi-clock"></i> 30 นาที</span>
+                         
+                          <a href="learn.html" class="btn btn-sm btn-primary rounded-pill px-3">ดูวิดีโอ</a>
+                        </div>
+                      </div>
+
+                      <div class="lesson-row-new">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-circle icon-blue"></i>
+                          <span>ทำข้อสอบหลังเรียน</span>
+                          
+                        </div>
+                         <div class="lesson-row-new">
+                        <div class="lesson-right-new">
+                         
+                          <a href="pretest2.1.html" class="btn btn-sm btn-primary rounded-pill px-3">ทำข้อสอบ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="lesson-unit-new">
+                    <div class="lesson-unit-header-new">
+                      <span>บทที่ 2</span>
+                    </div>
+                    <div class="lesson-items-new">
+                      <div class="lesson-row-new">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-circle icon-blue"></i>
+                          <span>ทำข้อสอบก่อนเรียน</span>
+                        </div>
+                        <div class="lesson-right-new">
+                          <a href="pretest2.1.html" class="btn btn-sm btn-primary rounded-pill px-3">ทำข้อสอบ</a>
+                        </div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-circle icon-blue"></i>
+                          <span>วิดีโอบทที่ 2</span>
+                        </div>
+                        <div class="lesson-right-new">
+                          <i class="bi bi-lock-fill lesson-lock-icon"></i>
+                        </div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new">
+                          <i class="bi bi-circle icon-blue"></i>
+                          <span>ทำหลังก่อนเรียน</span>
+                        </div>
+                        <div class="lesson-right-new">
+                          <i class="bi bi-lock-fill lesson-lock-icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lesson-unit-new">
+                    <div class="lesson-unit-header-new">
+                      <span>บทที่ 3</span>
+                    </div>
+                    <div class="lesson-items-new">
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>ทำข้อสอบก่อนเรียน</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>วิดีโอบทที่ 2</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>ทำข้อสอบหลังเรียน</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lesson-unit-new">
+                    <div class="lesson-unit-header-new">
+                      <span>บทที่ 4</span>
+                    </div>
+                    <div class="lesson-items-new">
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>ทำข้อสอบก่อนเรียน</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>วิดีโอบทที่ 2</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                      <div class="lesson-row-new locked-row">
+                        <div class="lesson-left-new"><i class="bi bi-circle icon-blue"></i><span>ทำข้อสอบหลังเรียน</span></div>
+                        <div class="lesson-right-new"><i class="bi bi-lock-fill lesson-lock-icon"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm p-4 text-center cd-enroll-card">
+            <h6 class="fw-bold mb-4 text-primary">สมัครเรียนหลักสูตร</h6>
+            <div class="d-flex gap-2">
+                <a href="login.html" class="btn btn-outline-primary flex-fill">
+                    เข้าสู่ระบบ
+                </a>
+                <a href="register.html" class="btn btn-primary flex-fill">
+                    ลงทะเบียน
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+        <div class="modal-header bg-primary text-white border-0 py-3">
+          <h5 class="modal-title fw-semibold" id="reportModalLabel">
+            <i class="bi bi-chat-dots me-2"></i>แจ้งปัญหาการเรียน
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label for="courseCategory" class="form-label fw-medium">หมวดหลักสูตร</label>
+              <select class="form-select" id="courseCategory">
+                <option selected>กรุณาเลือกหมวดหลักสูตร</option>
+                <option value="1">หมวด A</option>
+                <option value="2">หมวด B</option>
+                <option value="3">หมวด C</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="course" class="form-label fw-medium">หลักสูตร</label>
+              <select class="form-select" id="course">
+                <option selected>กรุณาเลือกหลักสูตร</option>
+                <option value="1">หลักสูตร B</option>
+                <option value="2">หลักสูตร C</option>
+                <option value="3">หลักสูตร D</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-medium">อาจารย์ผู้สอน : ชื่อ นามสกุล</label>
+            </div>
+            <div class="mb-3">
+              <label for="details" class="form-label fw-medium">รายละเอียด</label>
+              <textarea class="form-control" id="details" rows="4" placeholder="รายละเอียดคำถาม"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill fw-medium">
+                แจ้งปัญหา
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function changeLanguage(lang, imgSrc) {
+      const currentFlag = document.getElementById('current-flag');
+      currentFlag.src = imgSrc;
+      localStorage.setItem('selectedFlag', imgSrc);
+      console.log("Language changed to: " + lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedFlag = localStorage.getItem('selectedFlag');
+      if (savedFlag) {
+        document.getElementById('current-flag').src = savedFlag;
+      }
+    });
+  </script>
+
+  <footer class="footer-main">
+    <div class="container mb-5">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <img src="pic/logo2.png" style="height:50px;" class="mb-2" alt="logo footer">
+          <p class="mb-1">123 ถ. ลาดพร้าว 64 แยก 4 แขวงวังทองหลาง เขตวังทองหลาง</p>
+          <p class="mb-1">กรุงเทพมหานคร 10310</p>
+          <p class="mb-0">โทรศัพท์ : 0X XXX XXXX</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="row">
+            <div class="col-6 footer-links">
+              <h6 class="fw-bold">เมนูหลัก</h6>
+              <a href="index.html">หน้าหลัก</a>
+              <a href="allcourse.html">รายวิชา</a>
+              <a href="allnews.html">ข่าวประชาสัมพันธ์</a>
+              <a href="faq.html">คำถามที่พบบ่อย</a>
+            </div>
+
+            <div class="col-6 footer-links">
+              <h6 class="fw-bold">การใช้งาน</h6>
+              <a href="usebility.html">วิธีการใช้งาน</a>
+              <a href="contect.html">ติดต่อเรา</a>
+              <a href="#">นโยบายเว็บไซต์</a>
+              <a href="#">นโยบายความเป็นส่วนตัว</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold">ติดตามเรา</h6>
+          <div class="footer-social mt-2">
+            <a href="#" class="facebook"><img src="https://img.icons8.com/fluency/96/facebook-new.png "
+                class="facebook-icon"></a>
+            <a href="#" class="x"><img src="https://img.icons8.com/ios-glyphs/30/twitterx--v1.png" class="x-icon"></a>
+            <a href="#" class="youtube"><img src="pic/icons8-youtube-30.png" class="youtube-icon"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      © 24 E-Learning
+    </div>
+  </footer>
+  
+</body>
+</html>

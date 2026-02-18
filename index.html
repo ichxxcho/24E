@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24 E-learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo img-fluid" src="pic/logo2.png" alt="โลโก้">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+          <li class="nav-item"><a class="nav-link" href="allcourse.html">รายวิชา</a></li>
+          <li class="nav-item"><a class="nav-link" href="allnews.html">ข่าวประชาสัมพันธ์</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">คำถามที่พบบ่อย</a></li>
+          <li class="nav-item"><a class="nav-link" href="usebility.html">วิธีการใช้งาน</a></li>
+          <li class="nav-item"><a class="nav-link" href="contect.html">ติดต่อเรา</a></li>
+        </ul>
+        <div class="navbar-right">
+          <a href="#"><img src="pic/icons8-search-30.png" alt="ค้นหา" width="24"></a>
+          <span class="divider"></span>
+
+          <div class="dropdown user-dropdown">
+            <button class="btn-user" id="userBtn">
+              <img id="navbarUserImg" src="pic/icons8-user-24.png" class="user-icon">
+              <span id="navbarUserName">ชื่อผู้ใช้งาน</span>
+              <img src="pic/icons8-menu-50 (1).png" class="btn-icon">
+            </button>
+
+            <div class="custom-dropdown-content user-menu-box">
+
+              <div class="user-menu-header">
+          <img id="userMenuProfileImg" src="pic/icons8-user-64.png" class="profile-preview">
+          <div class="profile-name" id="userMenuName">ชื่อผู้ใช้งาน</div>
+          <div class="profile-sub text-center">
+    <a href="priv.html" class="d-block text-center">
+        ข้อมูลส่วนตัว
+    </a>
+</div>
+      </div>
+
+              <a href="status-user.html"><img src="https://img.icons8.com/ios-glyphs/30/todo-list--v1.png"> สถานะการเรียน</a>
+              <a href="plan.html"><img src="https://img.icons8.com/ios/50/calendar--v1.png"> แผนการเรียน</a>
+              <a href="calender-activity.html"><img src="https://img.icons8.com/ios/50/calendar-plus.png"> ปฏิทินกิจกรรม</a>
+
+              <hr>
+              <a href="#">ระบบจัดการ (เฉพาะ Admin)</a>
+              <a href="login.html" class="logout">ออกจากระบบ</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-btn" id="langBtn">
+              <img src="https://img.icons8.com/color/48/thailand.png" class="flag-icon" id="currentFlag"> ไทย
+            </button>
+            <div class="dropdown-content">
+              <a href="#" data-lang="th" data-flag="https://img.icons8.com/color/48/thailand.png">
+                <img src="https://img.icons8.com/color/48/thailand.png" class="flag-icon"> ไทย
+              </a>
+              <a href="#" data-lang="en" data-flag="https://img.icons8.com/color/48/usa.png">
+                <img src="https://img.icons8.com/color/48/usa.png" class="flag-icon"> English
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:0;">
+    <img src="pic/Screenshot 2025-11-11 170547.png" style="width:100%; display:block;">
+  </section>
+ 
+ <div class="menu-bg-wrap">
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-md-3">
+        <a href="Library.html" class="d-block text-center">
+          <img src="pic/tool1.png" class="menu-icon">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <a href="plan.html" class="d-block text-center">
+          <img src="pic/tool2.png" class="menu-icon">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+         <a href="Document-download.html" class="d-block text-center">
+          <img src="pic/tool3.png" class="menu-icon">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <a href="status-user.html" class="d-block text-center">
+          <img src="pic/tool4.png" class="menu-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container my-5">
+ 
+    <h2 class="text-center mb-4" style="color:#007bff;font-weight:bold;">รายวิชาของเรา</h2>
+    
+    <!-- Dropdown Filters แบบติดกัน -->
+<div class="filter-wrapper">
+  <div class="filter-group">
+
+
+  <div class="select-wrapper">
+    <select class="filter-select">
+      <option selected>เลือกหมวดหมู่</option>
+      <option>ชื่อหมวดหมู่</option>
+      <option>ชื่อหมวดหมู่</option>
+      <option>ชื่อหมวดหมู่</option>
+      <option>ชื่อหมวดหมู่</option>
+      <option>ชื่อหมวดหมู่</option>
+    </select>
+    <i class="bi bi-chevron-down select-icon"></i>
+  </div>
+
+  <div class="select-wrapper">
+    <select class="filter-select">
+      <option selected>เลือกหน่วยงาน</option>
+      <option>ชื่อหน่วยงาน</option>
+      <option>ชื่อหน่วยงาน</option>
+      <option>ชื่อหน่วยงาน</option>
+      <option>ชื่อหน่วยงาน</option>
+      <option>ชื่อหน่วยงาน</option>
+    </select>
+    <i class="bi bi-chevron-down select-icon"></i>
+  </div>
+
+  <div class="select-wrapper">
+    <select class="filter-select">
+      <option selected>รายวิชาทั้งหมด</option>
+      <option>รายวิชาที่น่าสนใจ</option>
+      <option>รายวิชาใหม่</option>
+      <option>รายวิชาที่เปิดอยู่</option>
+    </select>
+    <i class="bi bi-chevron-down select-icon"></i>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="section-header">
+<h2 style="color:#007bff;font-weight:bold;">รายวิชาที่น่าสนใจ</h2>
+<a href="/courses.html" class="view-all">ดูทั้งหมด</a>
+</div>
+<div class="course-slider-wrapper">
+
+  <div class="course-scroll" id="courseScroll1">
+
+    <!-- CARD 1 -->
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/c1.png" class="card-img-top">
+        <div class="card-body">
+          <a href="course-detail.html" class="course-title">ชื่อรายวิชา</a>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/c2.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/c3.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/c4.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="course-item">
+      <div class="card course-card h-100"> 
+        <img src="pic/course3.png" class="card-img-top"> 
+        <div class="card-body"> <h6 class="course-title">ชื่อรายวิชา1</h6> 
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p> 
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- เพิ่มได้ไม่จำกัด -->
+    
+  </div>
+
+  <button type="button" 
+        class="slide-btn prev" 
+        onclick="scrollCourses('courseScroll1', -1)">
+  <i class="bi bi-chevron-left"></i>
+</button>
+
+<button type="button" 
+        class="slide-btn next" 
+        onclick="scrollCourses('courseScroll1', 1)">
+  <i class="bi bi-chevron-right"></i>
+</button>
+
+</div>
+<script>
+function scrollCourses(id, direction){
+  const container = document.getElementById(id);
+  const cardWidth = container.querySelector(".course-item").offsetWidth + 24;
+
+  container.scrollBy({
+    left: direction * cardWidth,
+    behavior: "smooth"
+  });
+}
+</script>
+
+
+
+
+
+<div class="section-header2">
+<h2 style="color:#007bff;font-weight:bold;">รายวิชาใหม่</h2>
+<a href="/courses.html" class="view-all">ดูทั้งหมด</a>
+</div>
+<div class="course-slider-wrapper">
+
+  <div class="course-scroll" id="courseScroll2">
+
+    <!-- CARD 1 -->
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/cn1.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/cn2.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/cn3.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="course-item">
+      <div class="card course-card h-100">
+        <img src="pic/cn4.png" class="card-img-top">
+        <div class="card-body">
+          <h6 class="course-title">ชื่อรายวิชา</h6>
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="course-item">
+      <div class="card course-card h-100"> 
+        <img src="pic/cn1.png" class="card-img-top"> 
+        <div class="card-body"> <h6 class="course-title">ชื่อรายวิชา1</h6> 
+          <p class="course-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p> 
+          <span class="course-badge">หมวดหมู่</span>
+          <p class="course-badgedt">หน่วยงาน</p> 
+          <div class="rating mt-2"> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star-half"></i> 
+            <span class="rating-score">4.0</span> 
+          </div> 
+          <div class="progress mt-3"> 
+            <div class="progress-bar" style="width:80%">
+            </div> 
+            <span class="progress-text">80%</span> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- เพิ่มได้ไม่จำกัด -->
+    
+  </div>
+
+  <button type="button" 
+        class="slide-btn prev" 
+        onclick="scrollCourses('courseScroll2', -1)">
+  <i class="bi bi-chevron-left"></i>
+</button>
+
+<button type="button" 
+        class="slide-btn next" 
+        onclick="scrollCourses('courseScroll2', 1)">
+  <i class="bi bi-chevron-right"></i>
+</button>
+
+
+</div>
+
+<h2 class="mb-4" style="color:#007bff;font-weight:bold;">ข่าวประชาสัมพันธ์</h2>
+
+    <div class="row mb-4">
+ 
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm course-card position-relative">
+          <img src="pic/news1.png" class="card-img-top" alt="news1" style="height: 400px; object-fit: cover;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <h5 class="text-white fw-bold">
+              <a href="news.html" class="text-white text-decoration-none">
+              ข่าวประชาสัมพันธ์ 01
+            </a>
+          </h5>
+            <h2 class="text-white small mb-0">
+              <i class="bi bi-person-fill"></i> by 24 E-Learning &nbsp;
+              <i class="bi bi-calendar3"></i> 10 เม.ย. 2564
+            </h2>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-md-6">
+ 
+        <div class="card mb-3 shadow-sm pr-mini-card mb-3">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="pic/news2.png" class="img-fluid h-100" style="object-fit:cover;" alt="news2">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h6 class="text-dark fw-bold">ข่าวประชาสัมพันธ์02 Lorem Ipsum is simply dummy text of the printing..</h6>
+                <p class="small text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="card shadow-sm pr-mini-card mb-3">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="pic/news3.png" class="img-fluid h-100" style="object-fit:cover;" alt="news3">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h6 class="text-dark fw-bold">ข่าวประชาสัมพันธ์03 Lorem Ipsum is simply dummy text of the printing..</h6>
+                <p class="small text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+    
+    <div class="text-center mb-5">
+  <a href="allnews.html" class="btn btn-primary px-4 py-2 rounded-3 d-inline-flex align-items-center gap-2">
+    ดูทั้งหมด
+    <i class="bi bi-chevron-right"></i>
+  </a>
+</div>
+
+ 
+
+<h2 class="mb-4" style="color:#007bff;font-weight:bold;">วิดีโอแนะนำ</h2>
+
+<div class="container">
+  <div class="row g-3">
+
+    <!-- การ์ดข่าว -->
+<div class="col-lg-4 col-md-6">
+  <a href="video-detail.html" class="card-link">
+    <div class="card news-card h-100">
+
+      <!-- รูป + ไอคอน play -->
+      <div class="video-thumb">
+        <img src="pic/video1.png" class="card-img-top" alt="news">
+        <div class="video-overlay"></div>
+        <i class="bi bi-play-circle play-icon"></i>
+      </div>
+
+      <div class="card-body">
+        <h6 class="card-title">ชื่อวิดีโอ</h6>
+        <p class="card-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deserunt eveniet dolor exercitationem architecto veniam voluptatibus nam excepturi animi pariatur non saepe earum, error quidem, libero ut odit, tenetur aperiam.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- การ์ดข่าว -->
+<div class="col-lg-4 col-md-6">
+  <a href="video-detail.html" class="card-link">
+    <div class="card news-card h-100">
+
+      <!-- รูป + ไอคอน play -->
+      <div class="video-thumb">
+        <img src="pic/video2.png" class="card-img-top" alt="news">
+        <div class="video-overlay"></div>
+        <i class="bi bi-play-circle play-icon"></i>
+      </div>
+
+      <div class="card-body">
+        <h6 class="card-title">ชื่อวิดีโอ</h6>
+        <p class="card-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deserunt eveniet dolor exercitationem architecto veniam voluptatibus nam excepturi animi pariatur non saepe earum, error quidem, libero ut odit, tenetur aperiam.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+<!-- การ์ดข่าว -->
+<div class="col-lg-4 col-md-6">
+  <a href="video-detail.html" class="card-link">
+    <div class="card news-card h-100">
+
+      <!-- รูป + ไอคอน play -->
+      <div class="video-thumb">
+        <img src="pic/video3.png" class="card-img-top" alt="news">
+        <div class="video-overlay"></div>
+        <i class="bi bi-play-circle play-icon"></i>
+      </div>
+
+      <div class="card-body">
+        <h6 class="card-title">ชื่อวิดีโอ</h6>
+        <p class="card-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deserunt eveniet dolor exercitationem architecto veniam voluptatibus nam excepturi animi pariatur non saepe earum, error quidem, libero ut odit, tenetur aperiam.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="text-center mb-5">
+  <a href="video.html" class="btn btn-primary px-4 py-2 rounded-3 d-inline-flex align-items-center gap-2">
+    ดูทั้งหมด
+    <i class="bi bi-chevron-right"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</div>
+</div>
+  </div>
+</main>
+
+<footer class="footer-main">
+    <div class="container mb-5">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <img src="pic/logo2.png" style="height:50px;" class="mb-2" alt="logo footer">
+          <p class="mb-1">123 ถ. ลาดพร้าว 64 แยก 4 แขวงวังทองหลาง เขตวังทองหลาง</p>
+          <p class="mb-1">กรุงเทพมหานคร 10310</p>
+          <p class="mb-0">โทรศัพท์ : 0X XXX XXXX</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="row">
+            <div class="col-6 footer-links">
+              <h6 class="fw-bold">เมนูหลัก</h6>
+              <a href="index.html">หน้าหลัก</a>
+              <a href="allcourse.html">รายวิชา</a>
+              <a href="allnews.html">ข่าวประชาสัมพันธ์</a>
+              <a href="faq.html">คำถามที่พบบ่อย</a>
+            </div>
+
+            <div class="col-6 footer-links">
+              <h6 class="fw-bold">การใช้งาน</h6>
+              <a href="usebility.html">วิธีการใช้งาน</a>
+              <a href="contect.html">ติดต่อเรา</a>
+              <a href="#">นโยบายเว็บไซต์</a>
+              <a href="#">นโยบายความเป็นส่วนตัว</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold">ติดตามเรา</h6>
+          <div class="footer-social mt-2">
+            <a href="#" class="facebook"><img src="https://img.icons8.com/fluency/96/facebook-new.png "
+                class="facebook-icon"></a>
+            <a href="#" class="x"><img src="https://img.icons8.com/ios-glyphs/30/twitterx--v1.png" class="x-icon"></a>
+            <a href="#" class="youtube"><img src="pic/icons8-youtube-30.png" class="youtube-icon"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      © 24 E-Learning
+    </div>
+  </footer>
+  
+
+
+
+
+</body>
+
+
+
+
+
+</html>
+
+ 

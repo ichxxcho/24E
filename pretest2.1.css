@@ -1,0 +1,318 @@
+/* ========== Body & Base Styles ========== */
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #EAF8FC;
+}
+
+/* ========== Pretest Page Styles ========== */
+.test-main-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    border-bottom: none;
+    color: #000;
+}
+
+.question-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: visible;
+    border: 1px solid #e0e0e0;
+}
+
+.question-header {
+    background: #0A73E8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.question-text {
+    font-size: 14px;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.answer-options {
+    padding: 0 20px 20px;
+    margin-bottom: 0;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.answer-option:first-child {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.answer-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.answer-option label {
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
+    color: #333;
+}
+
+.question-nav {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.nav-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    text-align: right;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.question-btn {
+    padding: 12px 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s;
+    color: #333;
+}
+
+.question-btn:hover {
+    background: #f5f5f5;
+}
+
+.question-btn.answered {
+    background: #0A73E8;
+    color: white;
+    border-color: #0A73E8;
+}
+
+.question-btn.current {
+    border: 2px solid #0A73E8;
+    background: #fff;
+    color: #0A73E8;
+    font-weight: 600;
+}
+
+.timer-box-single {
+    background: #fff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.timer-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0;
+}
+
+.timer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.timer-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0A73E8;
+}
+
+.timer-value-red {
+    font-size: 14px;
+    font-weight: 600;
+    color: #dc3545;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.nav-buttons.has-prev {
+    justify-content: space-between;
+}
+
+.btn-nav {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-prev {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-prev:hover {
+    background: #5a6268;
+}
+
+.btn-next {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.btn-next:hover {
+    background: #f8f9fa;
+    border-color: #ccc;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #218838;
+}
+
+/* ส่วนท้าย */
+.footer-main {
+  background: linear-gradient(to bottom, #bde7ff, #e0f2fe);
+  padding: 40px 0 0 0;
+  color: #1f2933;
+  font-size: 14px;
+  margin-top: 0;
+}
+ 
+.footer-links a {
+  display: block;
+  color: #1f2933;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+ 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+ 
+.footer-social a.facebook {
+  color: #1877f2;
+}
+ 
+.footer-social a.x {
+  color: #111827;
+}
+ 
+.footer-social a.youtube {
+  color: #ff0000;
+}
+ 
+.footer-bottom {
+  background: #0284c7;
+  color: #e5f4ff;
+  font-size: 13px;
+  padding: 8px 0;
+}
+ .facebook-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.x-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.youtube-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/*4 grid*/
+.bgbtn-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* 4 รูปเรียงแนวนอน */
+.grid-buttons-horizontal {
+  position: absolute;
+  top: 95%;       /* ปรับตำแหน่งตอนหลังได้ */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 70px;      /* ระยะห่างระหว่างปุ่ม */
+}
+
+/* รูปปุ่ม */
+.btn-img {
+  width: 200px;    /* ปรับขนาดตามต้องการ */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-img:hover {
+  transform: scale(1.05);
+}
+/*ปรับรูปดาวน์โหลด*/
+.bgbtn-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+

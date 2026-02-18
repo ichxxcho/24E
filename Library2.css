@@ -1,0 +1,441 @@
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #EAF8FC;
+}
+
+.main{
+  flex: 1;
+}
+
+.navbar-brand img {
+  width: 40px;      
+  height: auto;      
+}
+/* navbar พื้นฐาน */
+.navbar-custom {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand img {
+  height: 40px;
+}
+
+.navbar-custom .nav-link {
+  color: #000;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0A73E8;
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+}
+
+/* ขวา: search, user, flag */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.btn-user {
+  background-color: #0A73E8;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: 500;
+  border: none; /* เพิ่มบรรทัดนี้ เพื่อลบเส้นขอบ */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-user:hover {
+  background-color: #095bb5;
+  color: #fff;
+  border: none;
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+.btn-user .btn-icon {
+    width: 16px;   /* ขนาดไอคอน */
+    height: 16px;
+    margin-left: 5px;
+}
+
+
+.navbar .logo {
+  max-height: 100px; /* สูงสุดที่โลโก้จะขยาย */
+  width: auto;
+}
+.divider {
+    width: 1px;           /* ความกว้างเส้น */
+    height: 24px;         /* ความสูงเส้น */
+    background-color: #ccc; /* สีของเส้น */
+}
+/* Dropdown ภาษา */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-btn .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-btn .arrow {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none; /* ซ่อนก่อน */
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ไอคอนธงใน dropdown */
+.dropdown-content .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+/* ปุ่มผู้ใช้งานเป็น dropdown */
+.user-dropdown {
+    position: relative;
+}
+
+.btn-user {
+    background: #0A73E8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-menu-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #fff;
+    min-width: 240px;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.user-dropdown:hover .user-menu-box {
+    display: block;
+}
+
+/* header */
+.user-menu-header {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-preview {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.profile-sub {
+    font-size: 14px;
+    color: gray;
+}
+
+/* menu items */
+.user-menu-box a {
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-menu-box a:hover {
+    background: #f5f5f5;
+}
+
+.user-menu-box img {
+    width: 20px;
+    height: 20px;
+}
+
+.logout {
+    color: red !important;
+}
+
+
+.breadcrumb-bar .container {
+    display: flex;
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    gap: 6px;            /* ระยะห่างระหว่างไอเท็ม */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.breadcrumb-bar .breadcrumb-icon,
+.breadcrumb-bar .separator img {
+    width: 18px;  /* ขนาดไอคอน */
+    height: 18px;
+}
+
+ 
+/* viewer */
+.viewer-wrapper{
+    width:80%;
+    margin:auto;
+    background:#ddd;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+ 
+.viewer-header{
+    background:#2f75b5;
+    color:#fff;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+ 
+.back-btn{
+    position:absolute;
+    left:15px;
+    cursor:pointer;
+}
+ 
+.viewer-body{
+    position:relative;
+    padding:60px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+}
+ 
+.book-frame{
+    width:600px;
+    height:350px;
+    border:6px solid #3a8ec1;
+    background:linear-gradient(to right,#eee,#ddd);
+}
+ 
+/* arrows */
+.arrow{
+    position:absolute;
+    font-size:60px;
+    color:#666;
+    cursor:pointer;
+}
+.arrow.left{ left:25px; }
+.arrow.right{ right:25px; }
+ 
+/* control bar */
+.control-bar{
+    position:absolute;
+    bottom:10px;
+    background:rgba(200,200,200,0.9);
+    padding:8px 14px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+}
+ 
+.control-bar i{
+    cursor:pointer;
+}
+ 
+.page{
+    background:#fff;
+    padding:2px 10px;
+    border-radius:4px;
+    font-size:14px;
+}
+ 
+/* footer */
+.footer-main {
+  background: linear-gradient(to bottom, #bde7ff, #e0f2fe);
+  padding: 40px 0 0 0;
+  color: #1f2933;
+  font-size: 14px;
+  margin-top: 50px;
+}
+ 
+.footer-links a {
+  display: block;
+  color: #1f2933;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+ 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+ 
+.footer-social a.facebook {
+  color: #1877f2;
+}
+ 
+.footer-social a.x {
+  color: #111827;
+}
+ 
+.footer-social a.youtube {
+  color: #ff0000;
+}
+ 
+.footer-bottom {
+  background: #0284c7;
+  color: #e5f4ff;
+  font-size: 13px;
+  padding: 8px 0;
+}
+ .facebook-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.x-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.youtube-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+ 
+/*4 grid*/
+.bgbtn-image {
+  position: relative;
+  display: inline-block;
+}
+ 
+/* 4 รูปเรียงแนวนอน */
+.grid-buttons-horizontal {
+  position: absolute;
+  top: 95%;       /* ปรับตำแหน่งตอนหลังได้ */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 70px;      /* ระยะห่างระหว่างปุ่ม */
+}
+ 
+/* รูปปุ่ม */
+.btn-img {
+  width: 200px;    /* ปรับขนาดตามต้องการ */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+ 
+.btn-img:hover {
+  transform: scale(1.05);
+}
+/*ปรับรูปดาวน์โหลด*/
+.bgbtn-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

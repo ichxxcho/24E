@@ -1,0 +1,1091 @@
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #EAF8FC;
+}
+
+.navbar-brand img {
+  width: 40px;      
+  height: auto;      
+}
+/* navbar พื้นฐาน */
+.navbar-custom {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand img {
+  height: 40px;
+}
+
+.navbar-custom .nav-link {
+  color: #000;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0A73E8;
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+}
+
+/* ขวา: search, user, flag */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.btn-user {
+  background-color: #0A73E8;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: 500;
+  border: none; /* เพิ่มบรรทัดนี้ เพื่อลบเส้นขอบ */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-user:hover {
+  background-color: #095bb5;
+  color: #fff;
+  border: none;
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+.btn-user .btn-icon {
+    width: 16px;   /* ขนาดไอคอน */
+    height: 16px;
+    margin-left: 5px;
+}
+
+
+.navbar .logo {
+  max-height: 100px; /* สูงสุดที่โลโก้จะขยาย */
+  width: auto;
+}
+.divider {
+    width: 1px;           /* ความกว้างเส้น */
+    height: 24px;         /* ความสูงเส้น */
+    background-color: #ccc; /* สีของเส้น */
+}
+/* Dropdown ภาษา */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-btn .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-btn .arrow {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none; /* ซ่อนก่อน */
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ไอคอนธงใน dropdown */
+.dropdown-content .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+/* ปุ่มผู้ใช้งานเป็น dropdown */
+.user-dropdown {
+    position: relative;
+}
+
+.btn-user {
+    background: #0A73E8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-menu-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #fff;
+    min-width: 240px;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.user-dropdown:hover .user-menu-box {
+    display: block;
+}
+
+/* header */
+.user-menu-header {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-preview {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.profile-sub {
+    font-size: 14px;
+    color: gray;
+}
+
+/* menu items */
+.user-menu-box a {
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-menu-box a:hover {
+    background: #f5f5f5;
+}
+
+.user-menu-box img {
+    width: 20px;
+    height: 20px;
+}
+
+.logout {
+    color: red !important;
+}
+
+.hero-image img {
+    width: 100%;       /* ให้เต็มความกว้างหน้าจอ */
+    height: auto;      /* รักษาสัดส่วนภาพ */
+    display: block;    /* ลบช่องว่างด้านล่าง */
+}
+.bgbtn-image img{
+   width: 100%;       /* ให้เต็มความกว้างหน้าจอ */
+    height: 300px;      /* รักษาสัดส่วนภาพ */
+    display: block;
+}
+
+h5 {
+    font-size: 30px;     /* เปลี่ยนหัวข้อให้ใหญ่ขึ้น */
+    font-weight: 600;
+    margin-top: 30px;
+    color: #0A73E8;
+}
+
+/* แถวฟิลเตอร์ 3 ช่อง */
+.filter-row {
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่าง dropdown */
+    justify-content: center;  /* เรียงจากซ้าย */
+    margin: 20px 0;
+    flex-wrap: wrap; /* เวลาหน้าจอเล็ก จะเลื่อนลง */
+}
+
+/* ปุ่ม dropdown */
+.filter-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    border: 1px solid #1F7BCC;
+}
+
+/* เนื้อหา dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+/* ลิงก์ใน dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.filter-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn .arrow-icon {
+    width: 16px;
+    position: absolute;
+    right: 12px;      /* ชิดขวาของปุ่ม */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+
+h4 {
+    margin-left: 100px;   /* ระยะห่างจากขอบซ้าย */
+    margin-top: 30px;
+    color: #1F7BCC;      /* สีใหม่ของตัวอักษร */
+    font-weight: 600;    /* ทำให้หนาหน่อย (ถ้าต้องการ) */
+}
+
+
+
+
+/* ===============================
+   RESET เบาๆ
+=============================== */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: rgb(228, 239, 255);
+  font-family: "Prompt", sans-serif;
+}
+
+/* ===============================
+   กล่องพื้นหลังหลังปุ่ม
+=============================== */
+.menu-bg-wrap{
+  background-image: url("pic/ดาวน์โหลด.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;        /* ระยะบนล่าง */
+}
+
+/* ===============================
+   รูปปุ่ม
+=============================== */
+.menu-icon{
+  max-width: 250px;       /* คุมขนาดปุ่ม */
+  width: 100%;
+  height: auto;
+  transition: transform .3s ease;
+}
+
+.menu-icon:hover{
+  transform: translateY(-5px);
+}
+
+/*dorpdown เลือกหน่วยงาน*/
+/* ===============================
+   Filter select (แทน dropdown)
+=============================== */
+/* กล่องรวม */
+.bs-joined-dd{
+  display: flex;
+  border: 3px solid #1e73d8;
+  border-radius: 10px;
+  overflow: visible;
+  background: #fff;
+}
+
+/* แต่ละช่อง */
+.bs-joined-item{
+  flex: 1;
+}
+
+/* เส้นคั่น */
+.bs-joined-item:not(:last-child){
+  border-right: 3px solid #1e73d8;
+}
+
+/* ปุ่ม */
+.bs-joined-btn{
+  width: 100%;
+  height: 46px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* ลูกศร bootstrap */
+.bs-joined-btn::after{
+  margin-left: auto;
+}
+
+/* dropdown menu */
+.bs-joined-menu{
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+/* ===============================
+   FIX Bootstrap dropdown (bs-joined)
+=============================== */
+
+/* ค่า default */
+.bs-joined-dd .dropdown-menu{
+  display: none;
+}
+
+/* อนุญาตให้ Bootstrap เปิดได้ */
+.bs-joined-dd .dropdown-menu.show{
+  display: block;
+}
+
+/* ปิดผล hover เดิม เฉพาะชุดนี้ */
+.bs-joined-dd .dropdown:hover .dropdown-menu{
+  display: none;
+}
+
+/* กัน dropdown โดนบัง */
+.bs-joined-dd{
+  position: relative;
+  z-index: 50;
+}
+
+.bs-joined-menu{
+  z-index: 100;
+}
+
+/* ===============================
+   FIX: dropdown แสดงตอนคลิกทันที
+=============================== */
+
+/* ===============================
+   FIX dropdown: คลิกแล้วลงทันที
+=============================== */
+
+/* ยกเลิก hover control เฉพาะ dropdown filter */
+.bs-joined-item:hover .dropdown-menu {
+  display: none !important;
+}
+
+/* ปกติซ่อน */
+.bs-joined-item .dropdown-menu {
+  display: none;
+  width: 100%;           /* ให้กว้างเท่าปุ่ม */
+  min-width: unset;      /* กัน bootstrap บังคับความกว้าง */
+}
+
+/* แสดงเมื่อ Bootstrap ใส่ .show (ตอนคลิก) */
+.bs-joined-item .dropdown-menu.show {
+  display: block;
+}
+
+/*ข่าว*/
+/* ===============================
+   PR / NEWS : ข่าวประชาสัมพันธ์
+=============================== */
+.pr-feature,
+.pr-mini-card{
+  border-radius: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: none;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+ 
+.pr-feature:hover,
+.pr-mini-card:hover{
+  transform: translateY(-8px);
+}
+ 
+/* ข่าวใหญ่ */
+.pr-feature{
+  position: relative;
+  height: 400px;
+}
+ 
+.pr-feature img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.pr-feature::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to top,
+    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.25) 45%,
+    rgba(0,0,0,0) 72%
+  );
+}
+ 
+.pr-feature-content{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:16px;
+  z-index:2;
+  color:#fff;
+}
+ 
+.pr-feature-title{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+ 
+.pr-feature-meta{
+  display:flex;
+  flex-wrap: wrap;
+  gap:14px;
+  font-size:14px;
+}
+.pr-feature-meta i{ margin-right:6px; }
+ 
+/* ข่าวย่อย */
+.pr-mini-card {
+  display: flex;
+  height: 200px;
+}
+
+.pr-mini-thumb {
+  width: 180px;
+  flex: 0 0 180px;
+  height: 100%;
+}
+
+.pr-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pr-mini-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* ✔ */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pr-mini-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ✔ */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+/*วิดีโอ*/
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;   /* 🔥 กำหนดสัดส่วนให้ทุกการ์ดเท่ากัน */
+  overflow: hidden;
+  border-radius: 5px; 
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 🔥 ครอบรูปให้เต็มโดยไม่เพี้ยน */
+}
+.card-link {
+  text-decoration: none;   /* 🔥 ลบเส้นใต้ */
+  color: inherit;          /* ใช้สีตัวอักษรเดิม ไม่เป็นฟ้า */
+}
+
+.card-link:hover {
+  color: inherit;
+}
+
+
+
+
+/* ============================= */
+/* COURSE SLIDER */
+/* ============================= */
+
+.course-slider-wrapper{
+  background:#eaf2fb;
+  padding:40px 20px;
+  border-radius:15px;
+}
+
+.course-card{
+  background:#fff;
+  border-radius:5px;
+  padding:8px;                /* 🔥 ใช้ padding ทำขอบขาว */
+ 
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+
+.course-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+
+.course-card img{
+  height:170px;
+  object-fit:cover;
+}
+
+.course-title{
+  font-weight:600;
+  font-size:16px;
+}
+
+.course-desc{
+  font-size:13px;
+  color:#666;
+  height:40px;
+  overflow:hidden;
+}
+
+.course-badge{
+  display:inline-block;
+  border:1px solid #ccc;
+  border-radius:20px;
+  padding:3px 10px;
+  font-size:12px;
+  background:#f8f8f8;
+}
+
+.rating i{
+  color:#ffc107;
+  font-size:14px;
+}
+
+.rating-score{
+  font-size:13px;
+  margin-left:5px;
+}
+
+.progress{
+  height:6px;
+  border-radius:10px;
+  background:#e0e0e0;
+}
+
+.progress-bar{
+  background:#1e73d8;
+  border-radius:10px;
+}
+
+/* ARROW STYLE */
+.course-slider-wrapper{
+  position:relative;
+  padding:40px 60px; /* เพิ่มช่องว่างซ้ายขวา */
+  background:#eaf2fb;
+  border-radius:15px;
+}
+
+.custom-arrow{
+  width:50px;
+}
+
+.carousel-control-prev{
+  left:-20px;
+}
+
+.carousel-control-next{
+  right:-20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-color:#fff;
+  border-radius:50%;
+  background-size:60%;
+  padding:22px;
+  box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+
+
+
+/* ============================= */
+/* PROGRESS CENTER % TEXT */
+/* ============================= */
+
+.progress{
+  height:10px;
+  border-radius:20px;
+  background:#e0e0e0;
+  position:relative;
+  overflow:hidden;
+}
+
+.progress-bar{
+  background:#1e73d8;
+  border-radius:20px;
+}
+
+.progress-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size:12px;
+  font-weight:600;
+  color:#fff;   /* สีดำ */
+  pointer-events:none;
+}
+
+.course-slider-wrapper{
+  position:relative;
+  background:#eaf2fb;
+  padding:10px 0 40px;
+  border-radius:15px;
+}
+
+.course-scroll{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  
+}
+
+.course-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+/* แสดง 4 ใบ */
+.course-item{
+  flex:0 0 306px;
+}
+
+.course-badgedt{
+  font-size:13px;     /* เล็กลง */
+  color:#6c757d;      /* เทาแบบ Bootstrap */
+  margin:4px 0 0 0;   /* ลดระยะห่าง */
+}
+
+.slide-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #ddd;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+/* ให้ทับเข้าไปบนการ์ดจริง ๆ */
+.slide-btn.left{
+  left:10px;   /* 🔥 ปรับตรงนี้ */
+}
+
+.slide-btn.right{
+  right:10px;  /* 🔥 ปรับตรงนี้ */
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* ============================= */
+/* PERFECT SLIDER ARROWS */
+/* ============================= */
+
+.course-slider-wrapper{
+  position: relative;
+  background:#eaf2fb;
+   padding:20px 0 40px; /* เว้นขอบให้ปุ่ม */
+  border-radius:15px;
+}
+
+/* ปุ่มวงกลม */
+.slide-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #e0e0e0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:20;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  transition:.2s;
+  font-size:20px;
+  color:#9aa0a6; /* สีเทาอ่อนเหมือนในรูป */
+}
+/* 🔥 ใช้ค่าติดขอบเท่ากัน */
+.slide-btn.left{
+  left:0;
+}
+
+.slide-btn.right{
+  right:0;
+}
+
+/* ตำแหน่ง */
+.prev{
+  left:-22px;
+}
+
+.next{
+  right:-22px;
+}
+
+/* hover */
+.slide-btn:hover{
+  background:#f8f9fa;
+  border-color:#d6d6d6;
+  color:#6c757d;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:5px;
+  margin-top:60px;
+}
+
+.section-header h2{
+  margin:0;             /* กัน Bootstrap ใส่ระยะเพิ่ม */
+}
+
+.view-all{
+  color:#007bff;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.view-all:hover{
+  text-decoration:underline;
+}
+
+.course-wrapper{
+  position:relative;
+  padding:0 20px;   /* 🔥 เพิ่มพื้นที่เผื่อเงา */
+}
+
+/*รายวิชาใหม่*/
+.section-header2{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+.section-header2 h2{
+  margin:0;             /* กัน Bootstrap ใส่ระยะเพิ่ม */
+}
+
+
+/* ===============================
+   FILTER DROPDOWN CONNECTED
+=================================*/
+.select-wrapper {
+    position: relative;
+    max-width: 700px;
+    flex: 1;
+}
+
+.filter-wrapper {
+    max-width: 900px;   /* 👈 ลดจาก search ลงนิดนึง */
+    margin: 0 auto;
+}
+
+
+.filter-group {
+    display: flex;
+    border: 3px solid #0A73E8;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* ซ่อนลูกศร default ของ browser */
+.filter-select {
+    width: 100%;
+    padding: 12px 40px 12px 15px; /* เผื่อที่ให้ icon */
+    border: none;
+    outline: none;
+    appearance: none;
+    background: #fff;
+    font-size: 14px;
+}
+
+/* icon ด้านขวา */
+.select-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* กดทะลุไป select ได้ */
+    font-size: 14px;
+    color: #555;
+}
+
+/* เส้นคั่นตรงกลาง */
+.filter-select:not(:last-child) {
+    border-right: 2px solid #0A73E8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .filter-select:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #0A73E8;
+    }
+}
+/* ส่วนท้าย */
+.footer-main {
+  background: linear-gradient(to bottom, #bde7ff, #e0f2fe);
+  padding: 40px 0 0 0;
+  color: #1f2933;
+  font-size: 14px;
+  margin-top: 50px;
+}
+ 
+.footer-links a {
+  display: block;
+  color: #1f2933;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+ 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+ 
+.footer-social a.facebook {
+  color: #1877f2;
+}
+ 
+.footer-social a.x {
+  color: #111827;
+}
+ 
+.footer-social a.youtube {
+  color: #ff0000;
+}
+ 
+.footer-bottom {
+  background: #0284c7;
+  color: #e5f4ff;
+  font-size: 13px;
+  padding: 8px 0;
+}
+ .facebook-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.x-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.youtube-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/*4 grid*/
+.bgbtn-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* 4 รูปเรียงแนวนอน */
+.grid-buttons-horizontal {
+  position: absolute;
+  top: 95%;       /* ปรับตำแหน่งตอนหลังได้ */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 70px;      /* ระยะห่างระหว่างปุ่ม */
+}
+
+/* รูปปุ่ม */
+.btn-img {
+  width: 200px;    /* ปรับขนาดตามต้องการ */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-img:hover {
+  transform: scale(1.05);
+}
+/*ปรับรูปดาวน์โหลด*/
+.bgbtn-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+ 
+.course-title{
+  font-weight:600;
+  font-size:16px;
+  color:#212529;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.course-title:hover{
+  color:#0A73E8;
+}
+
+/*ข่าวย่อย*/
+.pr-mini-card{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:stretch;
+  height:200px;
+  border-radius: 5px;
+}
+
+.pr-mini-thumb{
+  width:200px;
+  flex-shrink:0;
+}
+
+.pr-mini-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.pr-mini-card .card-body{
+  flex:1;
+}

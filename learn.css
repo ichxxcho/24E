@@ -1,0 +1,183 @@
+body{
+  background:#c9d8df;
+  font-family:"Segoe UI", sans-serif;
+}
+
+/* top bar */
+.topbar{
+  background:#ececec;
+  padding:14px;
+  border-bottom:1px solid #d2d2d2;
+}
+
+.back-btn{
+  background:#2f76b7;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:6px;
+}
+
+.note-btn{
+  background:#1fb6c9;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:6px;
+}
+
+/* title */
+.lesson-title{
+  color:#2f76b7;
+  font-weight:700;
+}
+
+.course-name{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  max-width:650px;
+}
+
+.course-name span:first-child{
+  white-space:nowrap;
+}
+
+.dots{
+  flex:1;
+  border-bottom:2px dotted #666;
+}
+
+/* video */
+.video-box{
+  position:relative;
+  margin:20px auto;
+  margin-top:15px;
+  border-radius:10px;
+  overflow:hidden;
+  
+}
+
+.video-img{
+  width:100%;
+  height:600px; 
+  object-fit:cover;
+}
+
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:90px;
+  height:90px;
+  background:#2f76b7;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:48px;
+}
+
+.video-controls{
+  position:absolute;
+  bottom:12px;
+  left:15px;
+  right:15px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+}
+
+.progress{
+  flex:1;
+  height:6px;
+  background:rgba(255,255,255,0.4);
+  border-radius:4px;
+}
+
+.progress-bar{
+  background:#2f76b7;
+}
+
+/* NOTE SIDEBAR */
+.note-sidebar{
+  position:fixed;
+  top:0;
+  right:-360px;
+  width:340px;
+  height:100%;
+  background:#f1f1f1;
+  box-shadow:-3px 0 8px rgba(0,0,0,0.15);
+  transition:0.3s;
+  z-index:999;
+}
+
+.note-sidebar.show{
+  right:0;
+}
+
+.note-header{
+  background:#2f76b7;
+  color:white;
+  padding:12px;
+  font-weight:600;
+}
+
+.note-sidebar textarea{
+  width:90%;
+  height:120px;
+  margin:15px;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  resize:none;
+}
+
+.save-btn{
+  display:block;
+  margin:0 auto 15px;
+  background:#2f76b7;
+  color:white;
+  border:none;
+  padding:8px 18px;
+  border-radius:4px;
+}
+
+.note-list-title{
+  background:#2f76b7;
+  color:white;
+  padding:8px 12px;
+  font-size:14px;
+}
+
+.note-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+.note-table th,
+.note-table td{
+  border:1px solid #c9c9c9;
+  padding:6px;
+}
+
+.note-table th{
+  background:#e8f0f8;
+}
+
+.time{
+  color:#ff9900;
+  font-weight:600;
+}
+
+.add-btn{
+  display:block;
+  margin:10px auto;
+  background:#2f76b7;
+  color:white;
+  border:none;
+  padding:6px 14px;
+  border-radius:4px;
+}

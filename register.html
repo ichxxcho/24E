@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="register-box">
+
+    <h5 class="title">ลงทะเบียนสมาชิก</h5>
+
+    <!-- แถว ชื่อผู้ใช้ + รหัสผ่าน -->
+    <div class="row">
+        <div class="field">
+            <label>ชื่อผู้ใช้งาน</label>
+            <input type="text" placeholder="ชื่อผู้ใช้งาน">
+        </div>
+
+        <div class="field">
+            <label>รหัสผ่าน</label>
+            <input type="password" placeholder="รหัสผ่าน">
+        </div>
+    </div>
+
+    <!-- วัน เดือน ปี -->
+    <div class="row">
+    <div class="field">
+        <label>วัน</label>
+        <select id="day">
+            <option value="" disabled selected>วัน</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label>เดือน</label>
+        <select id="month">
+            <option value="" disabled selected>เดือน</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label>ปี</label>
+        <select id="year">
+            <option value="" disabled selected>ปี</option>
+        </select>
+    </div>
+</div>
+
+
+<script>
+    // --------- วัน ----------
+    const daySelect = document.getElementById("day");
+    for (let d = 1; d <= 31; d++) {
+        let option = document.createElement("option");
+        option.value = d;
+        option.textContent = d;
+        daySelect.appendChild(option);
+    }
+
+    // --------- เดือน ----------
+    const monthSelect = document.getElementById("month");
+    const months = [
+        "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+        "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+    ];
+    months.forEach((m, index) => {
+        let option = document.createElement("option");
+        option.value = index + 1;
+        option.textContent = m;
+        monthSelect.appendChild(option);
+    });
+
+    // --------- ปี ----------
+    const yearSelect = document.getElementById("year");
+    const currentYear = new Date().getFullYear(); // ปีปัจจุบัน เช่น 2025
+    const startYear = currentYear - 60; // ย้อนหลัง 100 ปี (ถ้าต้องการน้อยกว่านี้ปรับได้)
+
+    for (let y = currentYear; y >= startYear; y--) {
+        let option = document.createElement("option");
+        option.value = y;
+        option.textContent = y + 543; // แปลงเป็น พ.ศ. ถ้าต้องการ ค.ศ. ลบออกได้
+        yearSelect.appendChild(option);
+    }
+</script>
+    <!-- เพศ + เบอร์โทร -->
+    <div class="row">
+        <div class="field">
+            <label>เพศ</label>
+            <select>
+                <option>ระบุ</option>
+                <option>ชาย</option>
+                <option>หญิง</option>
+                <option>อื่นๆ</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>เบอร์โทรศัพท์</label>
+            <input type="text" placeholder="0XX XXX XXXX">
+        </div>
+    </div>
+
+    <!-- อีเมล -->
+    <div class="field full">
+        <label>อีเมล</label>
+        <input type="email" placeholder="อีเมล">
+    </div>
+
+    <!-- ข้อกำหนด -->
+    <div class="terms">
+        <span>ข้อกำหนดและ <a href="#">เงื่อนไข</a></span>
+
+        <label class="check">
+            <input type="checkbox">
+            <span>อ่านรายละเอียดเงื่อนไขในการสมัครของ <b class="brand">24 E-Learning</b></span>
+        </label>
+    </div>
+
+    <!-- ปุ่ม -->
+    <button class="btn-submit">ยืนยันลงทะเบียน</button>
+
+    <div class="divider">หรือ</div>
+
+    <div class="social-btns">
+    <a class="social-btn btn-facebook">
+        <img src="https://img.icons8.com/fluency/144/facebook-new.png" width="20">
+        Facebook
+    </a>
+
+    <a class="social-btn btn-google">
+        <img src="https://img.icons8.com/color/144/google-logo.png" width="20">
+        Google
+    </a>
+</div>
+
+
+    <p class="login">
+        เป็นสมาชิกแล้ว? <a href="login.html">เข้าสู่ระบบ</a>
+    </p>
+
+</div>
+
+</body>
+</html>

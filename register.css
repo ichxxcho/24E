@@ -1,0 +1,169 @@
+body {
+    background: #F1F6FA;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Prompt", sans-serif;
+    margin: 0;
+}
+
+/* กล่อง */
+.register-box {
+    width: 440px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+}
+
+/* หัวข้อ */
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* ฟอร์ม */
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.field.full {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    background: #fff;
+}
+
+/* ข้อกำหนด */
+.terms {
+    margin: 10px 0 22px;
+    font-size: 14px;
+}
+.brand {
+    color: #1f7bcc ;  
+}
+
+.check {
+    margin-top: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.check input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+/* ปุ่มสมัคร */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0A73E8;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #1660a8;
+}
+
+/* เส้นคั่น */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999999; /* สีตัวหนังสือ */
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0;  /* ระยะห่างจากปุ่มด้านบนและล่าง */
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;                  /* ทำให้เส้นยืดเต็ม */
+    height: 1px;              /* ความหนาเส้น */
+    background: #999999;      /* สีเส้น */
+    margin: 0 10px;           /* ระยะห่างระหว่างเส้นกับคำว่า "หรือ" */
+}
+
+/* ปุ่ม social */
+.social-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;              /* ทำให้ <a> เป็นปุ่มจริง */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;      /* เอาเส้นใต้ <a> ออก */
+    background-color: #f8f9fa;  /* สีพื้นปุ่มเหมือน btn-light */
+    border: 1px solid #ccc;     /* ขอบเหมือนปุ่ม light */
+    color: #000;                /* สีตัวอักษร */
+    cursor: pointer;            /* เมาส์เป็น pointer */
+}
+
+/* hover effect */
+.social-btn:hover {
+    background-color: #e9ecef;
+}
+
+.social-btn.btn-facebook {
+    color: #1f7bcc ;  
+}
+
+.social-btn.btn-google {
+    color: #FFB31A ;  
+}
+
+
+
+/* login link */
+.login {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.login a {
+    color: #0A73E8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+

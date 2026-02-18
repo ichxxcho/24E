@@ -1,0 +1,177 @@
+body {
+    background-color: #F5F5F5;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+    font-family: "Prompt", sans-serif;
+}
+
+.logo {
+    width: 40%;              /* ขนาดตามเปอร์เซ็นต์กล่อง */
+    max-width: 200px;        /* ไม่ให้ใหญ่เกินไป */
+}
+
+
+/* กล่อง login */
+.login-box {
+    width: 400px;
+    height: 620px;     
+    background: #fff;
+    padding: 35px;
+    font-size: 18px;     /* ปรับขนาดฟ้อน */
+    font-weight: 500;  
+    box-shadow: 0px 4px 22px rgba(0,0,0,0.15);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.password-box {
+    position: relative;
+    padding-bottom: 10px; /* เพิ่มพื้นที่ด้านล่าง input ให้ลิงก์ไม่ชนขอบ */
+}
+
+.password-box .forgot {
+    position: absolute;
+    right: 5px;      /* ระยะห่างจากขอบขวา */
+    bottom: 5px;      /* ลิงก์อยู่ใต้ input แต่ไม่ติดขอบ */
+    font-size: 0.85rem;
+    color: #999999;
+    text-decoration: none;
+    font-size: 14px;
+    
+}
+
+.password-box .forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* ปรับขนาดช่องกรอก */
+.login-box input {
+    width: 400px;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.login-box h5 {
+    font-size: 30px;     /* เปลี่ยนหัวข้อให้ใหญ่ขึ้น */
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+/* ปุ่มเข้าสู่ระบบ */
+.login-btn {
+    width: 410px;
+    height: 45px;
+    background-color: #1f7bcc; 
+    border: none;        /* เอาขอบออก */
+    color: #fff;         /* ฟ้อนสีขาว */
+    font-size: 18px;     /* ปรับขนาดฟ้อน */
+    font-weight: 500;    /* (เลือกได้) ทำให้ฟ้อนดูหนาขึ้น */
+    border-radius: 5px;
+    margin-top: 10px;
+     text-decoration: none;  
+    
+}
+
+.login-btn:hover {
+    background-color: #1660a8; /* น้ำเงินเข้มขึ้นจาก #1f7bcc */
+     
+}
+
+.social-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    display: flex;              /* ทำให้ <a> เป็นปุ่มจริง */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;      /* เอาเส้นใต้ <a> ออก */
+    background-color: #f8f9fa;  /* สีพื้นปุ่มเหมือน btn-light */
+    border: 1px solid #ccc;     /* ขอบเหมือนปุ่ม light */
+    color: #000;                /* สีตัวอักษร */
+    cursor: pointer;            /* เมาส์เป็น pointer */
+}
+
+/* hover effect */
+.social-btn:hover {
+    background-color: #e9ecef;
+}
+
+.social-btn.btn-facebook {
+    color: #1f7bcc ;  /* เปลี่ยนสีฟอนต์เป็นขาว */
+}
+
+.social-btn.btn-google {
+    color: #FFB31A ;  /* เปลี่ยนสีฟอนต์เป็นขาว */
+}
+
+
+
+/* ปุ่มสมัครสมาชิก */
+.register-btn {
+    width: 410px;
+    height: 45px;
+    background-color: #FFB31A;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    display: flex;          /* ทำให้ <a> เป็นปุ่มจริง */
+    align-items: center;    /* จัดตัวหนังสือให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: center;/* กึ่งกลางแนวนอน */
+    text-decoration: none;  /* ลบเส้นใต้ */
+}
+
+.register-btn:hover {
+    background: #e8a010;
+}
+
+.no-account {
+    color: #999999;
+    font-size: 16px;
+}
+
+.text-center.my-2 {
+    margin-top: 15px; /* ปรับตัวเลขตามต้องการ */
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999999; /* สีตัวหนังสือ */
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0;  /* ระยะห่างจากปุ่มด้านบนและล่าง */
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;                  /* ทำให้เส้นยืดเต็ม */
+    height: 1px;              /* ความหนาเส้น */
+    background: #999999;      /* สีเส้น */
+    margin: 0 10px;           /* ระยะห่างระหว่างเส้นกับคำว่า "หรือ" */
+}
+
+input, textarea, select {
+    font-family: 'Prompt', sans-serif;
+}

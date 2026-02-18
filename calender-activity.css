@@ -1,0 +1,559 @@
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #EAF8FC;
+}
+
+.navbar-brand img {
+  width: 40px;      
+  height: auto;      
+}
+/* navbar พื้นฐาน */
+.navbar-custom {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar-custom .navbar-brand img {
+  height: 40px;
+}
+
+.navbar-custom .nav-link {
+  color: #000;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0A73E8;
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+}
+
+/* ขวา: search, user, flag */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.btn-user {
+  background-color: #0A73E8;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: 500;
+  border: none; /* เพิ่มบรรทัดนี้ เพื่อลบเส้นขอบ */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-user:hover {
+  background-color: #095bb5;
+  color: #fff;
+  border: none;
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+.btn-user .btn-icon {
+    width: 16px;   /* ขนาดไอคอน */
+    height: 16px;
+    margin-left: 5px;
+}
+
+
+.navbar .logo {
+  max-height: 100px; /* สูงสุดที่โลโก้จะขยาย */
+  width: auto;
+}
+.divider {
+    width: 1px;           /* ความกว้างเส้น */
+    height: 24px;         /* ความสูงเส้น */
+    background-color: #ccc; /* สีของเส้น */
+}
+/* Dropdown ภาษา */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-btn .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-btn .arrow {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none; /* ซ่อนก่อน */
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ไอคอนธงใน dropdown */
+.dropdown-content .flag-icon {
+    width: 20px;
+    height: 20px;
+}
+/* ปุ่มผู้ใช้งานเป็น dropdown */
+.user-dropdown {
+    position: relative;
+}
+
+.btn-user {
+    background: #0A73E8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-menu-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #fff;
+    min-width: 240px;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.user-dropdown:hover .user-menu-box {
+    display: block;
+}
+
+/* header */
+.user-menu-header {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-preview {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.profile-sub {
+    font-size: 14px;
+    color: gray;
+}
+
+/* menu items */
+.user-menu-box a {
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-menu-box a:hover {
+    background: #f5f5f5;
+}
+
+.user-menu-box img {
+    width: 20px;
+    height: 20px;
+}
+
+.logout {
+    color: red !important;
+}
+
+.hero-image img {
+    width: 100%;       /* ให้เต็มความกว้างหน้าจอ */
+    height: auto;      /* รักษาสัดส่วนภาพ */
+    display: block;    /* ลบช่องว่างด้านล่าง */
+}
+.bgbtn-image img{
+   width: 100%;       /* ให้เต็มความกว้างหน้าจอ */
+    height: 300px;      /* รักษาสัดส่วนภาพ */
+    display: block;
+}
+.breadcrumb-bar .container {
+    display: flex;
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    gap: 6px;            /* ระยะห่างระหว่างไอเท็ม */
+    margin-top: 10px;
+}
+
+.breadcrumb-bar .breadcrumb-icon,
+.breadcrumb-bar .separator img {
+    width: 18px;  /* ขนาดไอคอน */
+    height: 18px;
+}
+h5 {
+    font-size: 30px;     /* เปลี่ยนหัวข้อให้ใหญ่ขึ้น */
+    font-weight: 600;
+    margin-top: 30px;
+    color: #0A73E8;
+}
+
+/* ====== Calendar ====== */
+
+.calendar-top {
+  margin-top: 20px;
+}
+
+.month-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0A73E8;
+}
+
+.nav-arrow {
+  font-size: 20px;
+  color: #0A73E8;
+  cursor: pointer;
+}
+
+.view-switch {
+  display: flex;
+  border-radius: 8px;
+  
+}
+
+.view-switch button {
+  width: 120px;
+  border: none;
+  background: #d9d9d9;
+  font-size: 16px;
+  padding: 8px 0;
+  cursor: pointer;
+
+  border-right: 2px solid #fff; /* เส้นแบ่งสีขาว */
+}
+
+/* เอาเส้นขวาของปุ่มสุดท้ายออก */
+.view-switch button:last-child {
+  border-right: none;
+}
+
+/* ปุ่มที่ active */
+.view-switch button.active {
+  background: #0A73E8;
+  color: #fff;
+}
+
+
+.calendar-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* บังคับตารางไม่ยืด */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* สำคัญมาก */
+  border-collapse: collapse;  /* รวมเส้น */
+
+}
+
+/* หัวตารางทั้งหมด */
+.calendar-table th {
+  color: #fff;
+  padding: 12px;
+  font-weight: 500;
+  text-align: center;
+  border-right: 2px solid #fff;  /* เส้นแบ่งสีขาว */
+}
+
+/* อาทิตย์ (ช่องแรก) */
+.calendar-table th:first-child {
+  background: #0074A6;
+}
+
+/* เสาร์ (ช่องสุดท้าย) */
+.calendar-table th:last-child {
+  background: #0074A6;
+  border-right: none; /* เอาเส้นขวาสุดออก */
+}
+
+/* จันทร์–ศุกร์ (ช่องที่ 2-6) */
+.calendar-table th:nth-child(n+2):nth-child(-n+6) {
+  background: #0398D8;
+}
+/* เอาเส้นขวาช่องสุดท้ายออก */
+.calendar-table th:last-child {
+  border-right: none;
+}
+
+
+/* ทำให้ทุกช่องสูงเท่ากันตลอด */
+.calendar-table td {
+  border: 1px solid #dcecf4;
+  height: 110px;            /* ล็อคความสูง */
+  vertical-align: top;
+  padding: 8px;
+  position: relative;
+  background: #f8fcff;
+  overflow: visible;        /* กัน popup โดนตัด */
+}
+
+.date-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0A73E8;
+}
+
+/* ====== Event Pill ====== */
+
+/* ===== แถบ event ===== */
+.event-bar {
+  height: 34px;
+  background: linear-gradient(90deg,#1d7fbf,#0A73E8);
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+
+  align-items: center;     /* กลางแนวตั้ง */
+  justify-content: center; /* กลางแนวนอน */
+}
+
+
+/* ความกว้างคร่อม 2 ช่อง */
+.event-span-2 {
+  width: calc(200% + 2px);
+}
+
+/* ===== POPUP ===== */
+
+/* ===== Wrapper ครอบทั้ง bar + popup ===== */
+/* ===== Wrapper หลายวัน ===== */
+.event-wrapper {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+}
+
+/* ===== แถว event ===== */
+.row-1 { top: 40px; }
+.row-2 { top: 75px; }
+.row-3 { top: 110px; }
+
+/* คร่อมจำนวนวัน */
+.span-1 { width: 100%; }
+.span-2 { width: 200%; }
+.span-3 { width: 300%; }
+
+
+/* ใช้กำหนดจำนวนวันที่คร่อม */
+.span-2 { width: calc(200%); }
+.span-3 { width: calc(300%); }
+
+/* ===== Popup ===== */
+.event-popup {
+  display: none;
+  margin-top: 8px;
+  width: 360px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* แสดง popup เมื่อ hover ทั้ง wrapper */
+.event-wrapper:hover .event-popup {
+  display: block;
+}
+
+/* หัวข้อด้านบนรูป */
+.popup-header {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+/* รูป */
+.event-popup img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* เนื้อหา */
+.popup-content {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  word-break: break-word;
+}
+
+/* ===== ปรับมุมเวลาเป็นช่วงต่อ ===== */
+
+.event-bar.start {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.event-bar.middle {
+  border-radius: 0;
+}
+
+.event-bar.end {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.footer-main {
+  background: linear-gradient(to bottom, #bde7ff, #e0f2fe);
+  padding: 40px 0 0 0;
+  color: #1f2933;
+  font-size: 14px;
+}
+ 
+.footer-links a {
+  display: block;
+  color: #1f2933;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+ 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+ 
+.footer-social a.facebook {
+  color: #1877f2;
+}
+ 
+.footer-social a.x {
+  color: #111827;
+}
+ 
+.footer-social a.youtube {
+  color: #ff0000;
+}
+ 
+.footer-bottom {
+  background: #0284c7;
+  color: #e5f4ff;
+  font-size: 13px;
+  padding: 8px 0;
+}
+ .facebook-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.x-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.youtube-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
